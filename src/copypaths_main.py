@@ -30,6 +30,8 @@ def main(q):
                 paths = p.fileUrls()
             if "-s" in options:
                 paths = p.shortPaths()
+            if "-l" in options:
+                paths = p.lablupPaths()
             if "-q" in options:
                 paths = p.quotedPaths(paths)
             if "-p" in options:

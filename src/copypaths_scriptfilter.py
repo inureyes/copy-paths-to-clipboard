@@ -44,6 +44,9 @@ def main(q=False):
           if "-s" in q:
               paths = unquote(p.shortPaths()).decode('utf-8')
               f_icon_name += "_short"
+          if "-l" in q:
+              paths = unquote(p.lablupPaths()).decode('utf-8')
+              f_icon_name += "_short"
       
       if "-q" in q:
           f_icon_name += "_quoted"

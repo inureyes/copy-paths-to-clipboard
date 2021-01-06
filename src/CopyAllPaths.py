@@ -67,6 +67,21 @@ class CopyAllPaths:
                 sp += a
         return sp
 
+    def lablupPaths(self):
+        sp = ""
+        for a in self.paths:
+            if a.startswith("Users/"):
+                a = "/" + a
+            if a.startswith("/Users/"):
+                b = a.replace('/Users/inureyes/Clouds/lablup', '')
+                if sp != "":
+                    sp += ", "
+                sp += b
+            else:
+                if sp != "":
+                    sp += ", "
+                sp += a
+        return sp
 
     def quotedPaths(self, p=False, t=False):
         if p:
